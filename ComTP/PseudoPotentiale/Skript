@@ -1,0 +1,17 @@
+#!/bin/tcsh
+
+#$ -cwd
+
+#$ -N CoTPTest
+
+#$ -o benzen.out
+
+#$ -j y
+
+#$ -l h_rt=600
+
+#$ -m be
+
+#$ -M noah@jaitner.de
+
+./pw.x < pw.benzene.scf.in > pw.benzene.scf.out

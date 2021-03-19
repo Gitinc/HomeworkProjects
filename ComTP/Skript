@@ -1,0 +1,19 @@
+#!/bin/bash --login
+
+#$ -cwd
+
+#$ -pe ompi* 4
+
+#$ -N CoTPTest
+
+#$ -o pw.benzene.scf.out
+
+#$ -j y
+
+#$ -l h_rt=86400
+
+#$ -m be
+
+#$ -M noah@jaitner.de
+
+mpirun -np $NSLOTS pw.x < pw.benzene.scf.in
